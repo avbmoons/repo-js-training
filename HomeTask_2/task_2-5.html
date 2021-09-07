@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task_2-5</title>
+    <script>
+        function myAdd(x, y) {
+            return x + y;
+        }
+
+        function mySubt(x, y) {
+            return x - y;
+        }
+
+        function myMult(x, y) {
+            return x * y;
+        }
+
+        function myDiv(x, y) {
+            if (y != 0)
+                return (Math.floor((x / y) * 100)) / 100;
+            else
+
+                return 0;
+        }
+
+        let a = Number(prompt('Введите число x: '));
+        let b = Number(prompt('Введите число y: '));
+
+        alert('сумма: ' + myAdd(a, b) + '\n' + 'разность: ' + mySubt(a, b) + '\n' + 'произведение: ' + myMult(a, b) + '\n' + 'частное: ' + myDiv(a, b));
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

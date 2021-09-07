@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task_2-3</title>
+    <script>
+        let a = prompt('Введите целое число a = ');
+        let b = prompt('Введите целое число b = ');
+        let aa = Math.round(Number(a));
+        let bb = Math.round(Number(b));
+
+        if (aa >= 0) {
+            if (bb >= 0) {
+                let cc = aa - bb;
+                alert('a = ' + aa + ' положительное' + '\n' + 'b = ' + bb + ' положительное' + '\n' + 'разность (a - b) = ' + cc);
+            }
+            else {
+                cc = aa + bb
+                alert('a = ' + aa + ' положительное' + '\n' + 'b = ' + bb + ' отрицательное' + '\n' + 'сумма (a + b) = ' + cc);
+            }
+        }
+        else if (bb < 0) {
+            cc = aa * bb;
+            alert('a = ' + aa + ' отрицательное' + '\n' + 'b = ' + bb + ' отрицательное' + '\n' + 'произведение (a * b) = ' + cc);
+        }
+        else {
+            cc = aa + bb
+            alert('a = ' + aa + ' отрицательное' + '\n' + 'b = ' + bb + ' положительное' + '\n' + 'сумма (a + b) = ' + cc);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
