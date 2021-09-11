@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task_3-3</title>
+    <script>
+        function countBasketPrice(x) {
+            let n = x.length;
+            let s = 0;
+            for (let i = 0; i <= (n - 1); i++) {
+                s += x[i];
+            }
+            return s;
+        }
+
+        let price_1 = +100;
+        let price_2 = +120;
+        let price_3 = +200;
+        let price_4 = +140;
+        let price_5 = +350;
+
+        let cartItems = [
+            {
+                title: 'item_1',
+                price: price_1
+            },
+            {
+                title: 'item_2',
+                price: price_2
+            },
+            {
+                title: 'item_3',
+                price: price_3
+            },
+            {
+                title: 'item_4',
+                price: price_4
+            },
+            {
+                title: 'item_5',
+                price: price_5
+            },
+        ];
+
+        let itemPrice = [];
+
+        for (let item of cartItems) {
+            itemPrice.push(item.price);
+        }
+        /*console.log(itemPrice);*/
+
+        let total = countBasketPrice(itemPrice);
+
+        for (let item of cartItems) {
+            console.log(item.title + ' стоит ' + item.price);
+            document.write("<p>&#x2714&nbsp" + item.title + " стоит " + item.price + "</p>");
+        }
+
+        let cartCounter = cartItems.length;
+        console.log('Сумма корзины всего: ' + total);
+        document.write("<h2>Сумма корзины всего: " + total + "</h2>")
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
