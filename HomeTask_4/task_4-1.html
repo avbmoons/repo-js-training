@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task_4-1</title>
+    <script>
+        let num = +prompt('Введите число от 0 до 999: ');
+
+        if (num >= 0 && num < 1000) {
+
+            let a = Math.floor((num / 1) % 10);
+            let b = Math.floor((num / 10) % 10);
+            let c = Math.floor((num / 100) % 10);
+
+            let numObj = {
+                ones: a,
+                tens: b,
+                hundreds: c
+            };
+            console.log('число: ' + num);
+            console.log('единицы: ' + numObj.ones + ' десятки: ' + numObj.tens + ' сотни: ' + numObj.hundreds);
+            document.write("число: " + num + '<br>' + 'единицы: ' + numObj.ones + ' десятки: ' + numObj.tens + ' сотни: ' + numObj.hundreds);
+
+        }
+        else {
+            console.log('Ошибка! Введите корректное число');
+            numObj = null;
+            console.log('число: ' + numObj);
+            document.write('Ошибка! Введите корректное число' + '<br>' + 'число: ' + numObj + "</h4>");
+
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
