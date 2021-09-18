@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task_5</title>
+
+</head>
+
+<body>
+    <style type="text/css">
+        table,
+        td {
+            border: 1px solid #e3e0cf;
+            border-collapse: collapse;
+            padding: 10px 23px;
+        }
+    </style>
+
+    <div></div>
+
+
+    <script>
+        var table = document.createElement("table"), tr, td;
+        var table = document.createElement("table"), tr, td;
+
+        var headerTop = [' ', 'h', 'g', 'f', 'e', 'd', 'c', 'b', 'a', ' '];
+        console.log(headerTop);
+
+        var headerLeft = [' ', '1', '2', '3', '4', '5', '6', '7', '8', ' '];
+        console.log(headerLeft);
+
+        for (var i = 1; i <= 10; i++) {
+            tr = document.createElement("tr");
+            table.appendChild(tr);
+            for (j = 1; j <= 10; j++) {
+                td = document.createElement("td");
+                td.style.backgroundColor = "#e5dcaa";
+                if (i > 1 && i < 10 && j > 1 && j < 10 && i % 2 == 0 && j % 2 !== 0) {
+                    td.style.backgroundColor = "#918c6e";
+                }
+                else if (i > 1 && i < 10 && j > 1 && j < 10 && i % 2 !== 0 && j % 2 == 0) {
+                    td.style.backgroundColor = "#918c6e";
+                }
+                else {
+                    td.style.backgroundColor = "#faf2ca";
+                }
+                if (i == 1 && j > 1 && j < 10) {
+                    td.innerHTML = "<h2>" + headerTop[j - 1] + "</h2>";
+                    td.style.transform = "rotate(180deg)";
+                    td.style.color = "#757260";
+                }
+
+                if (i == 2 && j > 1 && j < 10) {
+                    //td.innerHTML = "<h2>" + "&#9818;</h2>";
+                    if (j == 2) {
+                        td.innerHTML = "<h2>" + "&#9820;</h2>";
+                    }
+                    else if (j == 3) {
+                        td.innerHTML = "<h2>" + "&#9822;</h2>";
+                    }
+                    else if (j == 4) {
+                        td.innerHTML = "<h2>" + "&#9821;</h2>";
+                    }
+                    else if (j == 5) {
+                        td.innerHTML = "<h2>" + "&#9819;</h2>";
+                    }
+                    else if (j == 6) {
+                        td.innerHTML = "<h2>" + "&#9818;</h2>";
+                    }
+                    else if (j == 7) {
+                        td.innerHTML = "<h2>" + "&#9821;</h2>";
+                    }
+                    else if (j == 8) {
+                        td.innerHTML = "<h2>" + "&#9822;</h2>";
+                    }
+                    else {
+                        td.innerHTML = "<h2>" + "&#9820;</h2>";
+                    }
+
+
+                }
+                if (i == 3 && j > 1 && j < 10) {
+                    td.innerHTML = "<h2>" + "&#9823;</h2>";
+                }
+                if (i == 8 && j > 1 && j < 10) {
+                    td.innerHTML = "<h2>" + "&#9817;</h2>";
+                }
+                if (i == 9 && j > 1 && j < 10) {
+                    if (j == 2) {
+                        td.innerHTML = "<h2>" + "&#9814;</h2>";
+                    }
+                    else if (j == 3) {
+                        td.innerHTML = "<h2>" + "&#9816;</h2>";
+                    }
+                    else if (j == 4) {
+                        td.innerHTML = "<h2>" + "&#9815;</h2>";
+                    }
+                    else if (j == 5) {
+                        td.innerHTML = "<h2>" + "&#9813;</h2>";
+                    }
+                    else if (j == 6) {
+                        td.innerHTML = "<h2>" + "&#9812;</h2>";
+                    }
+                    else if (j == 7) {
+                        td.innerHTML = "<h2>" + "&#9815;</h2>";
+                    }
+                    else if (j == 8) {
+                        td.innerHTML = "<h2>" + "&#9816;</h2>";
+                    }
+                    else {
+                        td.innerHTML = "<h2>" + "&#9814;</h2>";
+                    }
+                }
+                if (i == 10 && j > 1 && j < 10) {
+                    td.innerHTML = "<h2>" + headerTop[j - 1] + "</h2>";
+                    td.style.color = "#757260";
+                }
+                if (j == 1) {
+                    td.innerHTML = "<h2>" + headerLeft[i - 1] + "</h2>";
+                    td.style.color = "#757260";
+                }
+                if (j == 10) {
+                    td.innerHTML = "<h2>" + headerLeft[i - 1] + "</h2>";
+                    td.style.transform = "rotate(180deg)";
+                    td.style.color = "#757260";
+                }
+                //td.innerHTML = "<h2>" + ' ' + "</h2>";
+                table.append(td);
+            }
+        }
+
+
+        document.querySelector("div").append(table);
+
+
+    </script>
+
+</body>
+
+</html>
