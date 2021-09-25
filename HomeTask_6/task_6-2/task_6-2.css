@@ -1,0 +1,229 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+main{
+    margin: 0 auto;
+    padding: 0;
+    width: 700px;
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: border-box;
+    background-color: wheat;
+}
+.cart{
+    margin: 0 auto 10px;
+    padding: 0;
+    width: 100%;
+    min-height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: rgb(255, 252, 238);
+
+}
+.cart-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.cart-bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.cart-head{
+    color: brown;
+    text-align: left;
+    padding-left: 20px;
+}
+.cart-headings{
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+.headings{
+    font-size: 14px;
+    color: grey;
+}
+.cart-bottom-line{
+    width: 90%;
+    height: 1px;
+    color: grey;
+}
+/* стили для Items in the cart */
+.cart-item{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.item-quantity, .item-amount, .item-product{
+    width: 32%;
+}
+.item-quantity-input, .item-amount-input{
+    width: 90%;
+}
+.item-product-input{
+    width: 100%;
+}
+.item-quantity-input, .item-amount-input, .item-product-input{
+    height: fit-content;
+    border:1px solid grey;
+    border-radius: 5px;
+    background:none;
+    color: black;
+    font-size: 14px;
+    text-align: center;    
+    padding-left: 5px;
+}
+.item-quantity-input{
+    margin-left: 20px;
+}
+.item-amount{
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+
+/* стили для Totals */
+.cart-totals{
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.cart-totals-head{
+    margin: 0 auto;
+    color: grey;
+    font-size: 14px;
+}
+.cart-totals-head,.total-quantity, .total-amount{
+    margin: 0 auto;
+    width: 32%;
+}
+.total-quantity-input, .total-amount-input{
+    width: 100%;
+    height: fit-content;
+    /*border:1px solid grey;
+    border-radius: 5px;*/
+    border: none;
+    background:none;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+.total-amount{
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.cart-totals-head{
+    color: grey;
+    font-size: 14px;
+    text-align: left;
+    margin: 5px 150px 5px 21x;
+    padding: 0;
+}
+
+
+
+
+.catalog{
+    margin: 0 auto 10px;
+    padding: 0;
+    width: 100%;
+    height: 70%;
+ }
+.items{
+    margin: 0 auto 10px;
+    padding: 0;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    background-color: cornsilk;
+
+}
+.catalog-head{
+    color: brown;
+    text-align: left;
+    padding-left: 20px;
+}
+.item{
+    margin: 10px auto;
+    padding: 0;
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+.item-img{
+    margin: 0 auto;
+    width: 98%;
+    height: auto; 
+    /*border: 1px solid grey;*/
+}
+.item-head{
+    color: grey;
+    font-size: 14px;
+    text-align: left;
+    margin: 5px auto 5px 21px;
+    padding: 0;
+}
+.item-price{
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-left: 5px;
+    padding: 0;
+}
+.item-price-head{
+    color: grey;
+    font-size: 14px;
+    height: fit-content;
+    margin: 5px auto 5px;
+    padding: 0;
+}
+.item-price-num{
+    padding: 0;
+    width: 30%;
+    height: auto;
+    font-size: 14px;
+    color: red;
+    background: none;
+    border: none;
+    margin: 5px auto 5px;
+    padding: 0;
+}
+.currency{
+    color: grey;
+    font-size: 14px;
+    height: fit-content;
+    text-align: left;
+    margin: 5px auto 5px;
+    padding: 0;
+}
+.btt-buy{
+    margin: 10px auto;
+    width: 30%;
+    border-radius: 5px;
+    border: 1px solid grey;
+    color: brown;
+    font-weight: 700;
+}
+

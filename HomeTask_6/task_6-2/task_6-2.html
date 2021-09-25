@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task_6-2</title>
+    <script defer src="task_6-2.js"></script>
+    <link rel="stylesheet" href="task_6-2.css">
+
+</head>
+
+<body>
+    <main>
+        <section class="cart" id="cart">
+            <article class="cart-top" id="cart-top">
+                <h3 class="cart-head">Cart</h3>
+                <div class="cart-headings">
+                    <h3 class="headings">Product</h3>
+                    <h3 class="headings">Quantity</h3>
+                    <h3 class="headings">Amount</h3>
+                </div>
+
+                <!--<div class="cart-item">
+                    <div class="item-product" id="item-product">
+                        <input class="item-product-input" type=" text">
+                    </div>
+                    <div class="item-quantity" id="item-quantity">
+                        <input class="item-quantity-input" type="number">
+                    </div>
+                    <div class="item-amount" id="item-amount">
+                        <input class="item-amount-input" type="number">
+                        <p class="currency">&#8381</p>
+                    </div>
+
+                </div>-->
+            </article>
+
+            <article class="cart-bottom" id="cart-bottom">
+                <hr class="cart-bottom-line">
+                <div class="cart-totals">
+                    <h3 class="cart-totals-head">Totals</h3>
+                    <div class="total-quantity">
+                        <input class="total-quantity-input" type="number" id="total-quantity" value="">
+                    </div>
+                    <div class="total-amount">
+                        <input class="total-amount-input" type="number" id="total-amount" value="">
+                        <p class="currency">&#8381</p>
+                    </div>
+
+                </div>
+            </article>
+
+        </section>
+        <section class="catalog">
+            <h3 class="catalog-head">Catalog</h3>
+            <div class="items" id="items">
+                <div class="item">
+                    <img class="item-img" id="item_1" src="img/item-1.jpg" alt="photo-1">
+                    <h3 class="item-head" id="head_1">ELLERY X M'O CAPSULE</h3>
+                    <div class="item-price">
+                        <h3 class="item-price-head">Price: </h3>
+                        <input class="item-price-num" type="number" id="price_1" value="200" readonly>
+                        <p class="currency">&#8381</p>
+                    </div>
+                    <button class="btt-buy" id="1" onclick="addToCart(this.id)">BUY</button>
+
+                </div>
+                <div class="item">
+                    <img class="item-img" id="item_2" src="img/item-2.jpg" alt="photo-2">
+                    <h3 class="item-head" id="head_2">Australian arbiter of cool</h3>
+                    <div class="item-price">
+                        <h3 class="item-price-head">Price: </h3>
+                        <input class="item-price-num" type="number" id="price_2" value="300" readonly>
+                        <p class="currency">&#8381</p>
+                    </div>
+                    <button class="btt-buy" id="2" onclick="addToCart(this.id)">BUY</button>
+
+                </div>
+                <div class="item">
+                    <img class="item-img" id="item_3" src="img/item-3.jpg" alt="photo-3">
+                    <h3 class="item-head" id="head_3">Known for her sculptural</h3>
+                    <div class="item-price">
+                        <h3 class="item-price-head">Price: </h3>
+                        <input class="item-price-num" type="number" id="price_3" value="250" readonly>
+                        <p class="currency">&#8381</p>
+                    </div>
+                    <button class="btt-buy" id="3" onclick="addToCart(this.id)">BUY</button>
+
+                </div>
+                <div class="item">
+                    <img class="item-img" id="item_4" src="img/item-4.jpg" alt="photo-4">
+                    <h3 class="item-head" id="head_4">Ellery teams up with Moda</h3>
+                    <div class="item-price">
+                        <h3 class="item-price-head">Price: </h3>
+                        <input class="item-price-num" type="number" id="price_4" value="400" readonly>
+                        <p class="currency">&#8381</p>
+                    </div>
+                    <button class="btt-buy" id="4" onclick="addToCart(this.id)">BUY</button>
+
+                </div>
+                <div class="item">
+                    <img class="item-img" id="item_5" src="img/item-5.jpg" alt="photo-5">
+                    <h3 class="item-head" id="head_5">Traditional tailoring, Australian.</h3>
+                    <div class="item-price">
+                        <h3 class="item-price-head">Price: </h3>
+                        <input class="item-price-num" type="number" id="price_5" value="450" readonly>
+                        <p class="currency">&#8381</p>
+                    </div>
+                    <button class="btt-buy" id="5" onclick="addToCart(this.id)">BUY</button>
+
+                </div>
+                <div class="item">
+                    <img class="item-img" id="item_6" src="img/item-6.jpg" alt="photo-6">
+                    <h3 class="item-head" id="head_6">Arbiter of cool Kym</h3>
+                    <div class="item-price">
+                        <h3 class="item-price-head">Price: </h3>
+                        <input class="item-price-num" type="number" id="price_6" value="230" readonly>
+                        <p class="currency">&#8381</p>
+                    </div>
+                    <button class="btt-buy" id="6" onclick="addToCart(this.id)">BUY</button>
+
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+</body>
+
+</html>
