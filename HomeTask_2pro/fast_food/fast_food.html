@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fast_food</title>
+    <script defer src="fast_food.js"></script>
+    <link rel="stylesheet" href="fast_food.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="top">
+            <header>
+                <h2>Fast food</h3>
+            </header>
+            <main>
+                <section class="burger" id="burger">
+                    <h3>Сделайте выбор</h3>
+                    <div class="type">
+                        <img class="image" src="img/burger-big.png" alt="burger-big">
+                        <h4>"Большой"<br>гамбургер</h4>
+                        <button class="choice" id="big" onclick="getBurger(this.id)">Выбрать</button>
+                    </div>
+                    <div class="type">
+                        <img class="image" src="img/burger-small.png" alt="burger-small">
+                        <h4>"Маленький" гамбургер</h4>
+                        <button class="choice" id="small" onclick="getBurger(this.id)">Выбрать</button>
+                    </div>
+                </section>
+                <section class="stuffing" id="stuffing">
+                    <div class="stuffing-box" id="stuffing-box">
+                        <h3>Сделайте выбор начинки</h3>
+                        <div class="type">
+                            <img class="image" src="img/cheese.png" alt="cheese">
+                            <h4>Сыр</h4>
+                            <button class="choice" id="cheese" onclick="getStuffing(this.id)">Выбрать</button>
+                        </div>
+                        <div class="type">
+                            <img class="image" src="img/salad.png" alt="salad">
+                            <h4>Салат</h4>
+                            <button class="choice" id="salad" onclick="getStuffing(this.id)">Выбрать</button>
+                        </div>
+                        <div class="type">
+                            <img class="image" src="img/potato.png" alt="potato">
+                            <h4>Картофель</h4>
+                            <button class="choice" id="potato" onclick="getStuffing(this.id)">Выбрать</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="options" id="options">
+                    <div class="options-box" id="options-box">
+                        <h3>Сделайте выбор приправ</h3>
+                        <div class="type">
+                            <img class="image" src="img/spice.png" alt="spice">
+                            <h4>Специи</h4>
+                            <button class="choice" id="spice" onclick="getOption(this.id)">Выбрать</button>
+                        </div>
+                        <div class="type">
+                            <img class="image" src="img/sauce.png" alt="sauce">
+                            <h4>Майонез</h4>
+                            <button class="choice" id="sauce" onclick="getOption(this.id)">Выбрать</button>
+                        </div>
+
+                    </div>
+                </section>
+
+            </main>
+
+        </div>
+
+        <footer>
+            <section class=" order" id="order">
+                <div class="order-box" id="order-box">
+                    <h3>Ваш заказ:</h3>
+                    <div class="order-headings">
+                        <h4>Блюдо</h4>
+                        <h4>Позиция</h4>
+                        <h4>Цена, руб.</h4>
+                        <h4>Каллории</h4>
+                    </div>
+
+                    <div class="order-parts" id="order-parts">
+                        <div class="part-box" id="type-box">
+                            <!--<input class="order-part" type="text" id="type">-->
+                        </div>
+                        <div class="part-box" id="name-box">
+                            <!--<input class="order-part" type="text" id="name">-->
+                        </div>
+                        <div class="part-box" id="price-box">
+                            <!--<input class="order-part" type="text" id="price">-->
+                        </div>
+                        <div class="part-box" id="calorie-box">
+                            <!--<input class="order-part" type="text" id="calorie">-->
+                        </div>
+
+
+                    </div>
+                    <hr class="footer-line">
+                    <h3>Всего:</h3>
+                    <div class="order-totals" id="order-totals">
+                        <input class="order-total" type="text" id="quantity-total">
+                        <input class="order-total" type="text" id="price-total">
+                        <input class="order-total" type="text" id="calorie-total">
+                    </div>
+                </div>
+            </section>
+
+
+        </footer>
+
+    </div>
+
+
+</body>
+
+</html>

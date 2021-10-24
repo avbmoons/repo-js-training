@@ -1,0 +1,251 @@
+$site-width:700px;
+$site-color:white;
+$header-color:#b4cfc2;
+$footer-color:#e1e3e2;
+$h2-color:white;
+$h3-color:#adc4b9;
+$h4-color:#3d6351;
+$p-color:#68736e;
+$header-height:100px;
+$footer-height:100px;
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.wrapper{
+    margin: 0 auto;
+    width: $site-width;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid $footer-color;
+    .top{
+        margin: 0 auto;
+        width: $site-width;
+        min-height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-grow: 1;
+        /*border: 1px solid black;*/
+        header{
+            margin: 0 auto;
+            width: $site-width;
+            min-height: $header-height;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: $header-color;
+            /*border: 1px solid blue;*/
+            h2{
+                padding-left: 20px;
+                color: $h2-color;;
+            }
+
+        }
+        main{
+            margin: 0 auto;
+            width: $site-width;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: $header-color;
+            /*border: 1px solid blue;*/
+            .burger{
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-around;
+                border: 1px solid $footer-color;
+                h3{
+                    margin:auto 20px;
+                    color: $h3-color;
+                }
+                .type{
+                    margin: 20px auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .image{
+                        width: 50%;
+                        height: auto;
+                        border: 1px solid $footer-color;
+                    }
+                    h4{
+                        width: 50%;
+                        text-align: center;
+                        white-space: normal;
+                        color: $h4-color;
+                    }
+                    .choice{
+                        width: 50%;
+                        height: auto;
+                        padding: 5px;
+                        border: 1px solid $header-color;
+                    }
+                }
+            }
+            .stuffing{
+                margin: 0 auto;
+                display: none;
+                /*display: block;*/
+
+                .stuffing-box{
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: space-around;
+                    border: 1px solid $footer-color;
+                    h3{
+                        margin:auto 20px;
+                        color: $h3-color;
+                    }
+                    .type{
+                        margin: 20px auto;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        .image{
+                            width: 50%;
+                            height: auto;
+                            border: 1px solid $footer-color;
+                        }
+                        h4{
+                            width: 50%;
+                            text-align: center;
+                            white-space: normal;
+                            color: $h4-color;
+                        }
+                        .choice{
+                            width: 50%;
+                            height: auto;
+                            padding: 5px;
+                            border: 1px solid $header-color;
+                        }
+                    }
+
+                }
+
+            }
+            .options{
+                margin: 0 auto;
+                display: none;
+                /*display: block;*/
+
+                .options-box{
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: space-around;
+                    border: 1px solid $footer-color;
+                    h3{
+                        margin:auto 20px;
+                        color: $h3-color;
+                    }
+                    .type{
+                        margin: 20px auto;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        .image{
+                            width: 50%;
+                            height: auto;
+                            border: 1px solid $footer-color;
+                        }
+                        h4{
+                            width: 50%;
+                            text-align: center;
+                            white-space: normal;
+                            color: $h4-color;
+                        }
+                        .choice{
+                            width: 50%;
+                            height: auto;
+                            padding: 5px;
+                            border: 1px solid $header-color;
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+    }
+    footer{
+        margin: 0 auto;
+        width: $site-width;
+        min-height: $footer-height;
+        background-color: $footer-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /*border: 1px solid green;*/
+        .order{
+            margin: 0 auto;
+            display: none;
+            /*display: block;*/
+            .order-box{
+                margin: 10px auto;
+                width: $site-width;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                /*border: 1px solid violet;*/
+                h3{
+                    margin:auto 20px;
+                    color: $p-color;
+                }
+                .order-headings{
+                    margin: 0 auto;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    h4{
+                        color: $h4-color;
+                        font-size: 16px;
+                    }
+                }
+
+
+                .order-parts{
+                    margin: 0 auto;
+                    width: $site-width;
+                    display: flex;
+                    justify-content: space-around;
+                    .part-box{
+                        margin: 0 auto;
+                        width: 23%;
+                    }
+                    .order-part{
+                        margin-bottom: 10px;
+                        width: 100%;
+                        text-align: center;
+                        border: 1px solid $h4-color;
+                    }
+                }
+
+                
+
+                .footer-line{
+                    color: $p-color;
+                    height: 2px;
+                }
+                .order-totals{
+                    margin: 0 auto;
+                    width: 99%;
+                    display: flex;
+                    justify-content: flex-end;
+                    .order-total{
+                        width: 23%;
+                        margin-left: 10px;
+                        margin-bottom: 20px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+    }
+}
