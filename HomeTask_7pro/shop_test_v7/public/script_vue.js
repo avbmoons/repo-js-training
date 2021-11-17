@@ -30,6 +30,7 @@ Vue.component('goods-item', {
     <p class="p-item">$ {{ price }}</p>
 </div>`,
     props: {
+        id_product: Number,
         title: String,
         price: Number,
     },
@@ -40,10 +41,11 @@ Vue.component('goods-item', {
                 headers: {
                   'Content-Type': 'application/JSON'
                 },
-                body: JSON.stringify({ product_name: this.title, price: this.price })
+                body: JSON.stringify({ id_product:this.id_product, product_name: this.title, price: this.price })
               })
-            //this.$emit('add')
-            this.$emit('add', this.good)
+              .then(()=>{
+                  this.$root.loadCart();
+              })
         }
     },
 })
@@ -88,10 +90,11 @@ Vue.component('cart-item', {
                 headers: {
                   'Content-Type': 'application/JSON'
                 },
-                body: JSON.stringify({ product_name: this.title, price: this.price })
+                body: JSON.stringify({ id_product:this.id_product,product_name: this.title, price: this.price })
               })
-            this.$emit('remove', this.good);
-            //console.log(good);
+              .then(()=>{
+                this.$root.loadCart();
+            })
         }
     }
 })
@@ -105,7 +108,7 @@ Vue.component('cart', {
     </div>
     <div class="goods-list">
     <cart-item 
-    v-for="good of cart" 
+    v-for="good of cart"
     v-bind:value="good.id_product" 
     v-bind:good="good" 
     v-on:remove="onRemove">
@@ -119,7 +122,7 @@ Vue.component('cart', {
         },
         onRemove(good) {
             this.$emit('remove', good)
-        }
+        }      
     }
 })
 
@@ -133,7 +136,6 @@ new Vue({
     },
     methods: {
         loadGoods() {
-            //fetch(`${API_URL}catalogData.json`)
             fetch(`${API_URL}catalogData`)
                 .then((request) => request.json())
                 .then((data) => {
@@ -142,17 +144,13 @@ new Vue({
                 })
         },
         loadCart() {
-            //fetch(`${API_URL}getBasket.json`)
-            //fetch(`${API_URL}getBasket`)
             fetch(`${API_URL}cart`)
                 .then((request) => request.json())
                 .then((data) => {
-                    //this.cart = data.contents;
                     this.cart = data;
                 })
         },
         addToCart(good) {
-            //fetch(`${API_URL}addToBasket.json`)
             fetch(`${API_URL}addToCart`, {method:'post'})
                 .then(() => {
                     this.cart.push(good)
@@ -162,8 +160,6 @@ new Vue({
                 })
         },
         removeFromCart(good) {
-            //fetch(`${API_URL}deleteFromBasket.json`)
-            //fetch(`${API_URL}deleteFromBasket`)
             fetch(`${API_URL}removeFromCart`,{method:'post'})
                 .then(() => {
                     const index = this.cart.findIndex((item) => item.id_product === good.id_product)

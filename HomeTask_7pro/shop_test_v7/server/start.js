@@ -12,19 +12,20 @@ app.use(express.static(static_dir))
 
 app.get('/catalogData', (req, res) => {
     fs.readFile('data/catalog.json', 'utf8', (err, data) => {
+        const catalog=JSON.parse(data);
+        console.log('list',catalog);
         res.send(data);
     })
 });
 
 app.post('/addToCart', (req, res) => {
-    //console.log('ajsdgkajdgakd');
     fs.readFile('data/cart.json', 'utf8', (err, data) => {
         const cart = JSON.parse(data);
 
         let id = 1;
 
         if (cart.length > 0) {
-            id = cart[cart.length - 1].id_product + 1;
+            let id = cart[cart.length - 1].id_product + 1;
         }
 
         const item = req.body;
@@ -33,7 +34,7 @@ app.post('/addToCart', (req, res) => {
         cart.push(item);
 
         fs.writeFile('data/cart.json', JSON.stringify(cart), (err) => {
-            console.log('done',cart);
+            console.log('done-1',cart);
             res.end();
         });
     });
@@ -54,7 +55,7 @@ app.post('/removeFromCart', (req, res) => {
   
       let id = 1;
   
-      if (cart.length > 0) {
+      if (cart.length > 0) {let
         id = cart[cart.length - 1].id_product + 1;
       }
   
@@ -64,7 +65,7 @@ app.post('/removeFromCart', (req, res) => {
       cart.splice(item, 1);
   
       fs.writeFile('data/cart.json', JSON.stringify(cart), (err) => {
-        console.log('done');
+        console.log('done-2');
         res.end();
       });
     });
